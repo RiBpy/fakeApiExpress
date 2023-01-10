@@ -7,7 +7,7 @@ const {readdirSync}=require("fs")
 readdirSync("./routes").map(file=>app.use("/",require("./routes/"+file)))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Home Page')
 })
 app.listen(port, () => {
   console.log(`Fake API store running on port ${port}`)
